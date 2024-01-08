@@ -35,7 +35,9 @@ void enqueue(node *head,int data)
 }
 void dequeue(node *head)
 {
-  head->next=head->next->next;
+ node *temp = head->next;
+ head->next = head->next->next;
+ delete temp;
 }
 int main()
 {
